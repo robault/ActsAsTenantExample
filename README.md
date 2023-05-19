@@ -164,3 +164,7 @@ end
 ```
 
 This takes you right to posts so you can see that they are being filtered.
+
+#### Commit: 'Login redirect', [0956ac4](https://github.com/robault/ActsAsTenantExample/commit/0956ac477707a3af87ff7c763e478a263ae44336)
+
+---
