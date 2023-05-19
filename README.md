@@ -1,4 +1,4 @@
-# bundle exec rake db:drop db:create db:migrate db:seed (Rails 7)
+# Row-level Multitenancy with ActsAsTenant (Rails 7)
 
 ---
 
@@ -26,3 +26,7 @@ Then ran:
 ```bash
 bundle exec rake db:drop db:create db:migrate db:seed
 ```
+
+#### Commit: 'Initial project setup', [173d0ac](https://github.com/robault/CustomSubdomains/commit/173d0ac9d8fc611ba4670a20a192eee1e90bf8b4)
+
+---
