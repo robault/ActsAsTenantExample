@@ -148,3 +148,7 @@ This requiring the delete method is set automatically by default in the Devise i
 ```ruby
 config.sign_out_via = :delete
 ```
+
+#### Commit: 'Post controller and forms setup', [a915038](https://github.com/robault/ActsAsTenantExample/commit/a9150389d63cde9a3deae72f3a8148c07009f3e2)
+
+---
