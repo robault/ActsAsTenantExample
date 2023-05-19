@@ -91,3 +91,34 @@ I was then able to start the server and see the root page at: http://lvh.me:3000
 #### Commit: 'Gems, devise, User, and root route setup', [78e1ba3](https://github.com/robault/CustomSubdomains/commit/78e1ba324112b52d589163af91cae9256df1048a)
 
 ---
+
+Next, I added the filter to the application controller for tenant lookup.
+
+Then added an initializer for acts_as_tenant, turning the require_tenant setting off.
+
+This allows the application to run without a tenant, which assumes there is a top level presence in a multi-tenant system that has access to all tenant data.
+
+Next in the video, I scaffolded Post with a belongs_to User so that Posts are a tenant specific object:
+
+```bash
+bundle exec rails generate scaffold Post user:belongs_to title body:text
+```
+
+Then ran the db migration:
+
+```bash
+bundle exec rake db:migrate
+```
+
+I also added the following to the Post model:
+
+```ruby
+class Post < ApplicationRecord
+  acts_as_tenant(:user)
+  
+  belongs_to :user
+end
+```
+
+The acts_as_tenant(:user) line adds a default scope to the Post model that enforces a lookup by the tenant, which in this case is the User model.
+
