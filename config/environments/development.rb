@@ -67,4 +67,9 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # My additions below
+  config.action_mailer.default_url_options = { host: 'lvh.me', port: 3000 }
+  config.hosts << 'lvh.me' # allows lvh.me to work in development
+  config.hosts << /.*\.lvh\.me/ # allows subdomains to work in development
 end

@@ -70,3 +70,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# My additions below
+gem 'devise'
+gem 'acts_as_tenant'
