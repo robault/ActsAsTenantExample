@@ -27,7 +27,7 @@ Then ran:
 bundle exec rake db:drop db:create db:migrate db:seed
 ```
 
-#### Commit: 'Initial project setup', [173d0ac](https://github.com/robault/CustomSubdomains/commit/173d0ac9d8fc611ba4670a20a192eee1e90bf8b4)
+#### Commit: 'Initial project setup', [173d0ac](https://github.com/robault/ActsAsTenantExample/commit/173d0ac9d8fc611ba4670a20a192eee1e90bf8b4)
 
 ---
 
@@ -88,7 +88,7 @@ bundle exec rake db:migrate
 
 I was then able to start the server and see the root page at: http://lvh.me:3000
 
-#### Commit: 'Gems, devise, User, and root route setup', [78e1ba3](https://github.com/robault/CustomSubdomains/commit/78e1ba324112b52d589163af91cae9256df1048a)
+#### Commit: 'Gems, devise, User, and root route setup', [78e1ba3](https://github.com/robault/ActsAsTenantExample/commit/78e1ba324112b52d589163af91cae9256df1048a)
 
 ---
 
@@ -122,3 +122,6 @@ end
 
 The acts_as_tenant(:user) line adds a default scope to the Post model that enforces a lookup by the tenant, which in this case is the User model.
 
+#### Commit: 'Setting up a Post model with a tenant filter', [2789867](https://github.com/robault/ActsAsTenantExample/commit/27898670077e816ad9abd0aa05035b98bec8c68a)
+
+---
