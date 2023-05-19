@@ -87,3 +87,7 @@ bundle exec rake db:migrate
 ```
 
 I was then able to start the server and see the root page at: http://lvh.me:3000
+
+#### Commit: 'Gems, devise, User, and root route setup', [78e1ba3](https://github.com/robault/CustomSubdomains/commit/78e1ba324112b52d589163af91cae9256df1048a)
+
+---
