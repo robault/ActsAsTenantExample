@@ -152,3 +152,15 @@ config.sign_out_via = :delete
 #### Commit: 'Post controller and forms setup', [a915038](https://github.com/robault/ActsAsTenantExample/commit/a9150389d63cde9a3deae72f3a8148c07009f3e2)
 
 ---
+
+At this point I was able to regster two new users (me@here.com, me2@here.com), login, and create posts which only show up based on the tenant associated with the post. Which, in this case is "User".
+
+This next part wasn't in the video but I added a redirect after login to the posts index page:
+
+```ruby
+def after_sign_in_path_for(resource)
+  stored_location_for(resource) || posts_path
+end
+```
+
+This takes you right to posts so you can see that they are being filtered.
