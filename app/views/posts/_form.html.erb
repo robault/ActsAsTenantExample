@@ -11,10 +11,7 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
-  </div>
+  <% # removed user_id from the view because acts_as_tenant will set it for us on the server %>
 
   <div>
     <%= form.label :title, style: "display: block" %>

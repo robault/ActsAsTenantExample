@@ -125,3 +125,26 @@ The acts_as_tenant(:user) line adds a default scope to the Post model that enfor
 #### Commit: 'Setting up a Post model with a tenant filter', [2789867](https://github.com/robault/ActsAsTenantExample/commit/27898670077e816ad9abd0aa05035b98bec8c68a)
 
 ---
+
+Following along, I then removed user_id from the post params and post forms.
+
+I also added (this is just me, it was not in the video) a menu to get around the application.
+
+Notice the Devise sign out link uses a different format for Rails 7 now that it includes Turbo.
+
+```html
+<div>
+  <span><%= link_to 'Home |', root_path %></span>
+  <span><%= link_to 'Sign Up |', new_user_registration_path %></span>
+  <span><%= link_to 'Login |', user_session_path %></span>
+  <span><%= link_to 'Posts |', posts_path %></span>
+  <span><%= link_to 'New Post |', new_post_path %></span>
+  <span><%= link_to 'Logout', destroy_user_session_path, data: { turbo_method: :delete } %></span>
+</div>
+```
+
+This requiring the delete method is set automatically by default in the Devise initializer as:
+
+```ruby
+config.sign_out_via = :delete
+```

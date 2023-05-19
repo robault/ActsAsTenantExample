@@ -65,6 +65,7 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:user_id, :title, :body)
+      # removed :user_id from the list of permitted parameters because acts_as_tenant will set it for us
+      params.require(:post).permit(:title, :body)
     end
 end

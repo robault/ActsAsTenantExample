@@ -1,8 +1,6 @@
 <div id="<%= dom_id post %>">
-  <p>
-    <strong>User:</strong>
-    <%= post.user_id %>
-  </p>
+
+  <% # removed user_id from the view because acts_as_tenant will set it for us on the server %>
 
   <p>
     <strong>Title:</strong>
